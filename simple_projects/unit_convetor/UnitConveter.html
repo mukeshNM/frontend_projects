@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilometers to Meters Converter</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <nav>
+        <a href="">Home</a>
+        <a href="">KM to M</a>
+        <a href="">CM to M</a>
+        <a href="">IN to CM</a>
+        <a href="">Sec to Min</a>
+    </nav>
+
+    <div id="converter">
+        <h2>Kilometers to Meters Converter</h2>
+        <label for="kilometers">Enter distance in kilometers:</label>
+        <input type="number" id="kilometers" placeholder="Enter kilometers" step="any" required>
+        <button onclick="convert()">Convert</button>
+        <div id="result"></div>
+    </div>
+
+    <div id="cmToMConverter">
+        <h2>Centimeters to Meters Converter</h2>
+        <label for="centimeters">Enter length in centimeters:</label>
+        <input type="number" id="centimeters" placeholder="Enter centimeters" step="any" required>
+        <button onclick="convertCmToM()">Convert</button>
+        <div id="cmToMResult"></div>
+    </div>
+    <div id="inToCmConverter">
+        <h2>Inches to Centimeters Converter</h2>
+        <label for="inches">Enter length in inches:</label>
+        <input type="number" id="inches" placeholder="Enter inches" step="any" required>
+        <button onclick="convertInToCm()">Convert</button>
+        <div id="inToCmResult"></div>
+    </div>
+
+    <div id="secToMinConverter">
+        <h2>Seconds to Minutes Converter</h2>
+        <label for="seconds">Enter time in seconds:</label>
+        <input type="number" id="seconds" placeholder="Enter seconds" step="any" required>
+        <button onclick="convertSecToMin()">Convert</button>
+        <div id="secToMinResult"></div>
+    </div>
+    
+    <script>
+        function convert() {
+            var kilometers = document.getElementById('kilometers').value;
+            var meters = kilometers * 1000;
+            document.getElementById('result').innerHTML = kilometers + " kilometers is equal to " + meters + " meters.";
+        }
+    </script>
+
+   <script>
+        function convertCmToM() {
+            var centimeters = document.getElementById('centimeters').value;
+            var meters = centimeters / 100;
+            document.getElementById('cmToMResult').innerHTML = centimeters + " centimeters is equal to " + meters + " meters.";
+        }
+    </script>
+
+
+<script>
+    function convertSecToMin() {
+        var seconds = document.getElementById('seconds').value;
+        var minutes = seconds / 60;
+        document.getElementById('secToMinResult').innerHTML = seconds + " seconds is equal to " + minutes + " minutes.";
+    }
+</script>
+
+<script>
+function convertInToCm() {
+    var inches = document.getElementById('inches').value;
+    var centimeters = inches * 2.54;
+    document.getElementById('inToCmResult').innerHTML = inches + " inches is equal to " + centimeters + " centimeters.";
+}
+</script>
+
+
+</body> 
+</html>

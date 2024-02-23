@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<style>
+    body{
+        background-color: #1ddac1;
+      
+    }
+</style>
+   
+
+</head>
+<body>
+    <span id="hours">00</span>
+    <span>:</span>
+    <span id="minutes">00</span>
+    <span>:</span>
+    <span id="seconds">00</span>
+    <span id="am">AM</span>
+ 
+    
+
+    <script>
+
+        function Time ()
+        {
+
+     let clock = new Date()
+     let hr = clock.getHours()
+     let hrs = clock.getHours()
+     let min = clock.getMinutes()
+     let sec = clock.getSeconds()
+
+     let hours = document.querySelector("#hours")
+      let am = document.querySelector("#am")
+     if(hr>12)
+     am.innerHTML="PM"
+     if(hr>12)
+       hr = hr-12
+      
+     if(hr<10)
+      hr = '0'+hr
+   
+           hours.innerHTML=hr
+    let minutes = document.querySelector("#minutes")
+    if(min<10)
+    min = '0'+min
+          minutes.innerHTML=min
+    let seconds = document.querySelector("#seconds")
+    if(sec<10)
+    sec = '0'+sec
+           seconds.innerHTML=sec
+
+        }
+        setInterval(Time,1000)
+    </script>
+</body>
+</html>
