@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+#color-box {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  border: 1px solid #000;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
